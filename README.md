@@ -1,5 +1,9 @@
 # TicTacToe (Крестики-нолики)
 
+<p align="center">
+<img src="images/screenshot/TicTacToe.png" />
+</p>
+
 Простая игра «Крестики-нолики» на Java с использованием **Swing**.  
 Игроки ходят поочередно: `X` и `O`.  
 Поддерживаются:
@@ -33,11 +37,11 @@ gradle clean test
 
 ## 🛠 Используемые технологии
 <p align="center">
-<img src="icons/Java.svg" width="50" />
-<img src="icons/Intelij_IDEA.svg" width="50" />
-<img src="icons/GitHub.svg" width="50" />
-<img src="icons/JUnit5.svg" width="50" />
-<img src="icons/Gradle.svg" width="50" />
+<img src="images/icons/Java.svg" width="50" />
+<img src="images/icons/Intelij_IDEA.svg" width="50" />
+<img src="images/icons/GitHub.svg" width="50" />
+<img src="images/icons/JUnit5.svg" width="50" />
+<img src="images/icons/Gradle.svg" width="50" />
 </p>
 
 ## 💡 Идеи для улучшений
