@@ -1,7 +1,7 @@
 # TicTacToe (Крестики-нолики)
 
 <p align="center">
-<img src="images/screenshot/TicTacToe.png" />
+<img src="images/screenshot/TicTacToe.png" width="250" />
 </p>
 
 Простая игра «Крестики-нолики» на Java с использованием **Swing**.  
