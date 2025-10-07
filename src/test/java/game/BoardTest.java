@@ -9,7 +9,7 @@ public class BoardTest {
 
     @Test
     @DisplayName("Можно поставить метку и получить её из клетки")
-    void testPlaceMarkAndGetCell() {
+    void placeMarkAndGetCellTest() {
         Board board = new Board(3);
         assertTrue(board.placeMark(0, 0, "X"));
         assertEquals("X", board.getCell(0, 0));
@@ -18,7 +18,7 @@ public class BoardTest {
 
     @Test
     @DisplayName("Поле считается полным, когда все клетки заняты")
-    void testBoardIsFull() {
+    void boardIsFullTest() {
         Board board = new Board(3);
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++)
@@ -29,7 +29,7 @@ public class BoardTest {
 
     @Test
     @DisplayName("Метод reset() очищает поле")
-    void testBoardReset() {
+    void boardResetTest() {
         Board board = new Board(3);
         board.placeMark(0, 0, "X");
         board.reset();

@@ -54,8 +54,6 @@ public class GameFrame extends JFrame {
         add(restartButton, BorderLayout.SOUTH);
     }
 
-    // === Методы для контроллера ===
-
     public JButton[][] getButtons() {
         return buttons;
     }

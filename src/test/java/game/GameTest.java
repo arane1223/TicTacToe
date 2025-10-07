@@ -9,7 +9,7 @@ public class GameTest extends TestBase {
 
     @Test
     @DisplayName("После запуска игры первый игрок — X, поле пустое, игра не завершена")
-    void testInitialState() {
+    void initialStateTest() {
         assertEquals(Player.X, game.getCurrentPlayer());
         assertFalse(game.isGameOver());
         assertEquals(3, game.getBoard().getSize());
@@ -17,7 +17,7 @@ public class GameTest extends TestBase {
 
     @Test
     @DisplayName("Игрок X выигрывает по горизонтали")
-    void testHorizontalWin() {
+    void horizontalWinTest() {
         game.makeMove(0, 0);
         game.makeMove(1, 0);
         game.makeMove(0, 1);
@@ -30,7 +30,7 @@ public class GameTest extends TestBase {
 
     @Test
     @DisplayName("Игрок O выигрывает по вертикали")
-    void testVerticalWin() {
+    void verticalWinTest() {
         game.makeMove(0, 1);
         game.makeMove(0, 0);
         game.makeMove(1, 1);
@@ -44,7 +44,7 @@ public class GameTest extends TestBase {
 
     @Test
     @DisplayName("Игрок X выигрывает по диагонали")
-    void testDiagonalWin() {
+    void diagonalWinTest() {
         game.makeMove(0, 0);
         game.makeMove(0, 1);
         game.makeMove(1, 1);
@@ -57,7 +57,7 @@ public class GameTest extends TestBase {
 
     @Test
     @DisplayName("Игрок O выигрывает по побочной диагонали")
-    void testAntiDiagonalWin() {
+    void antiDiagonalWinTest() {
         game.makeMove(0, 0);
         game.makeMove(0, 2);
         game.makeMove(1, 0);
@@ -71,12 +71,7 @@ public class GameTest extends TestBase {
 
     @Test
     @DisplayName("Игра завершается ничьей")
-    void testTie() {
-        /*
-          X O X
-          X X O
-          O X O
-         */
+    void tieTest() {
         game.makeMove(0, 0);
         game.makeMove(0, 1);
         game.makeMove(0, 2);
@@ -93,7 +88,7 @@ public class GameTest extends TestBase {
 
     @Test
     @DisplayName("После reset() игра возвращается в начальное состояние")
-    void testRestartGame() {
+    void restartGameTest() {
         game.makeMove(0, 0);
         game.makeMove(1, 1);
         game.makeMove(0, 1);
