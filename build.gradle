@@ -5,15 +5,33 @@ plugins {
 group = 'sergey.glukhov'
 version = '1.0-SNAPSHOT'
 
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation platform('org.junit:junit-bom:5.10.2')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    testImplementation 'org.assertj:assertj-core:3.26.0'
 }
 
-test {
+tasks.test {
     useJUnitPlatform()
+
+    reports {
+        html.required.set(true)
+        junitXml.required.set(true)
+    }
+
+    testLogging {
+        events("passed", "skipped", "failed")
+        exceptionFormat "short"
+    }
 }
