@@ -2,7 +2,7 @@ package game;
 
 import org.junit.jupiter.api.BeforeEach;
 
-public abstract class TestBase {
+public class TestBase {
     protected Game game;
 
     @BeforeEach
